@@ -59,7 +59,7 @@ label.l{font-size:14px;color:var(--sub)}
 <body>
 <main>
 <h1>Melody Merger</h1>
-<p class="lead">A, B 두 음원을 올리고 필요한 구간을 골라 원하는 순서와 횟수로 배치하여 16마디 이상의 나만의 곡을 만들어 보세요.</p>
+<p class="lead">A, B 두 음원을 원하는 순서와 횟수로 배치하여 16마디 이상의 나만의 곡을 만들어 보세요.</p>
 
 <div class="slots" id="slots"></div>
 
@@ -88,7 +88,7 @@ label.l{font-size:14px;color:var(--sub)}
   <div id="msg" role="status" aria-live="polite"></div>
 </section>
 
-<p class="hint">두 음원의 장단과 빠르기(BPM)가 같아야 이어 붙였을 때 박이 어긋나지 않습니다. 음원을 들으면서 빨간 재생 위치선을 보고, 파형의 손잡이를 끌어 구간을 정하세요.</p>
+<p class="hint">© 2026 율쌤 ｜ 무단 배포 및 수정 금지</p>
 </main>
 
 <script>
@@ -231,7 +231,7 @@ label.l{font-size:14px;color:var(--sub)}
   function render(){
     var line = $('#line'); line.innerHTML = '';
     if(!blocks.length){
-      line.innerHTML = '<span class="empty">위에서 구간을 고르고 버튼을 누르면 여기에 순서대로 쌓입니다. 같은 음원이나 다른 구간을 여러 번 넣어도 됩니다. 자신의 창작 의도에 따라 두 선율의 순서와 반복을 자유롭게 구성할 수 있습니다.</span>';
+      line.innerHTML = '<span class="empty">원하는 구간을 선택하고 A 또는 B를 누르면 해당 구간이 곡에 추가됩니다.</span>';
     }
     blocks.forEach(function(b, i){
       var part = b.s > 0.005 || b.e < clips[b.k].dur - 0.005;
